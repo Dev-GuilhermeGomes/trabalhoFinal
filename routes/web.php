@@ -4,6 +4,8 @@ use App\Http\Controllers\StudioController;
 use App\Http\Controllers\GameController;
 use Illuminate\Support\Facades\Route;
 
+Route::fallback([App\Http\Controllers\GameController::class, 'fallback'])->name('fallback');
+
 // Público
 Route::get('/', [StudioController::class, 'index'])->name('studios.index');
 Route::redirect('/home', '/');

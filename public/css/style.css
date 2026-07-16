@@ -173,6 +173,133 @@ body::after {
     border-left: 3px solid #4caf50;
 }
 
+.error-page {
+    max-width: 760px;
+    margin: 2rem auto 1rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 28px;
+    border: 1px solid rgba(157, 142, 196, 0.18);
+    background:
+        radial-gradient(circle at top, rgba(157, 142, 196, 0.18), transparent 34%),
+        linear-gradient(180deg, rgba(39, 31, 79, 0.9), rgba(23, 18, 51, 0.96));
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.22);
+}
+
+.error-page__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(157, 142, 196, 0.14);
+    color: #d8d0f0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.error-page h1 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(2.6rem, 6vw, 4.8rem);
+    line-height: 0.96;
+}
+
+.error-page p {
+    max-width: 54ch;
+    margin: 1rem auto 0;
+    color: #d8d0f0;
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
+.error-page__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.85rem;
+    margin: 1.75rem 0 0;
+}
+
+.error-page__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0.85rem 1.15rem;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
+}
+
+.error-page__button:hover {
+    transform: translateY(-1px);
+}
+
+.error-page__button--primary {
+    background: linear-gradient(135deg, #a997ff, #7d67d6 50%, #6659a5);
+    color: #fff;
+    box-shadow: 0 12px 24px rgba(102, 89, 165, 0.28);
+}
+
+.error-page__button--primary:hover {
+    box-shadow: 0 16px 30px rgba(102, 89, 165, 0.36);
+}
+
+.error-page__button--secondary {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(157, 142, 196, 0.26);
+    color: #fff;
+}
+
+.error-page__button--secondary:hover {
+    border-color: rgba(199, 183, 255, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.error-page__button--ghost {
+    background: transparent;
+    border-color: rgba(157, 142, 196, 0.18);
+    color: #d8d0f0;
+}
+
+.error-page__button--ghost:hover {
+    border-color: rgba(199, 183, 255, 0.42);
+    color: #fff;
+}
+
+.error-page__card {
+    margin-top: 2rem;
+    padding: 1.4rem 1.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(157, 142, 196, 0.14);
+    background: rgba(255, 255, 255, 0.05);
+    text-align: left;
+}
+
+.error-page__card h2 {
+    margin: 0 0 0.8rem;
+    color: #fff;
+    font-size: 1.15rem;
+}
+
+.error-page__card ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: #d8d0f0;
+    line-height: 1.7;
+}
+
+.error-page__card li + li {
+    margin-top: 0.35rem;
+}
+
 .auth-shell {
     position: relative;
     display: grid;
@@ -434,6 +561,15 @@ body::after {
     .auth-hero,
     .auth-card {
         border-radius: 18px;
+    }
+
+    .error-page {
+        padding: 2.2rem 1.25rem;
+        border-radius: 22px;
+    }
+
+    .error-page__card {
+        padding: 1.2rem 1.1rem;
     }
 }
 

@@ -134,4 +134,9 @@ class GameController extends Controller
         $game->delete();
         return redirect()->route('games.index', $studio)->with('success', 'Jogo apagado.');
     }
+
+    public function fallback()
+    {
+        return view('404');
+    }
 }
