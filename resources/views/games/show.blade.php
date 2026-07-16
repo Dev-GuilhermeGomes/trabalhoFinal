@@ -7,7 +7,7 @@
 
     <div class="game-detail">
         <div class="game-hero">
-            <img src="{{ $game->cover_image ? asset('storage/' . $game->cover_image) : 'https://via.placeholder.com/600x320?text=Sem+Imagem' }}" alt="{{ $game->name }}">
+            <img src="{{ $game->cover_image ? asset('storage/' . $game->cover_image) : asset('images/nophoto.jpg') }}" alt="{{ $game->name }}">
         </div>
 
         <div class="game-info card-body">

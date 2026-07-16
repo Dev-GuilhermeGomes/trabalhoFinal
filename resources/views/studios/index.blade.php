@@ -14,7 +14,7 @@
     <div class="card-grid">
         @foreach($studios as $studio)
             <div class="card">
-                <img src="{{ $studio->logo ? asset('storage/' . $studio->logo) : 'https://via.placeholder.com/300x160?text=Sem+Imagem' }}"
+                <img src="{{ $studio->logo ? asset('storage/' . $studio->logo) : asset('images/nophoto.jpg') }}"
                     alt="{{ $studio->name }}">
                 <div class="card-body">
                     <h3>{{ $studio->name }}</h3>

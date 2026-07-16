@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 
 // Público
 Route::get('/', [StudioController::class, 'index'])->name('studios.index');
+Route::redirect('/home', '/');
 Route::get('/studios/{studio}/games', [GameController::class, 'index'])->name('games.index');
 Route::get('/games/{game}', [GameController::class, 'show'])->name('games.show');
 

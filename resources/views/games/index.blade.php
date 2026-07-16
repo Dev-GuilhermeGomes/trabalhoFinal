@@ -52,7 +52,7 @@
     <div class="card-grid">
         @forelse($games as $game)
             <div class="card">
-                <img src="{{ $game->cover_image ? asset('storage/' . $game->cover_image) : 'https://via.placeholder.com/300x160?text=Sem+Imagem' }}"
+                <img src="{{ $game->cover_image ? asset('storage/' . $game->cover_image) : asset('images/nophoto.jpg') }}"
                     alt="{{ $game->name }}">
                 <div class="card-body">
                     <h3>{{ $game->name }}</h3>

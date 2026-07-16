@@ -40,12 +40,18 @@
 
     <script>
         function toggleDropdown() {
-            document.getElementById('dropdownMenu').classList.toggle('show');
+            const dropdownMenu = document.getElementById('dropdownMenu');
+
+            if (dropdownMenu) {
+                dropdownMenu.classList.toggle('show');
+            }
         }
         // Fecha o dropdown se clicares fora dele
         window.addEventListener('click', function (e) {
-            if (!e.target.closest('.dropdown')) {
-                document.getElementById('dropdownMenu').classList.remove('show');
+            const dropdownMenu = document.getElementById('dropdownMenu');
+
+            if (dropdownMenu && !e.target.closest('.dropdown')) {
+                dropdownMenu.classList.remove('show');
             }
         });
     </script>
