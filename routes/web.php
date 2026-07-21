@@ -9,6 +9,7 @@ Route::fallback([App\Http\Controllers\GameController::class, 'fallback'])->name(
 // Público
 Route::get('/', [StudioController::class, 'index'])->name('studios.index');
 Route::redirect('/home', '/');
+Route::view('/consultar-jogos', 'games.free-api')->name('games.free-api');
 Route::get('/studios/{studio}/games', [GameController::class, 'index'])->name('games.index');
 Route::get('/games/{game}', [GameController::class, 'show'])->name('games.show');
 

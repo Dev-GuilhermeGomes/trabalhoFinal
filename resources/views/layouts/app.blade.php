@@ -14,6 +14,7 @@
 
         <div class="nav-links">
             <a href="{{ route('studios.index') }}">Estúdios</a>
+            <a href="{{ route('games.free-api') }}">Consultar jogos</a>
 
             @auth
                 <a href="{{ route('dashboard') }}">Dashboard</a>
